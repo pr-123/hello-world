@@ -1,0 +1,35 @@
+import random
+number=0
+chances=0
+random_number=random.randint(1,100)
+
+
+print("Random number is",random_number)
+print("the random number is b/w 1 to 100")
+while True:
+ x=int(input("Guess the number::"))
+ chances=chances+1
+ if x>random_number:
+     if  x<=(random_number+5):
+         print("You are too close to the number🤭!!!!")
+     elif x<=(random_number+25):
+         print("you are close to the number")
+     else:
+         print("your guess is to High🤷‍♀️")
+    #  print(f"Your guess of {x} is high")
+                
+ elif x<random_number:
+     if x>=(random_number-5):
+        print("You are too close the number!!!!🤭")
+     elif x>=(random_number-25 ):
+        print("you are close to the number")
+     else:
+        print("your guess is to low🤦‍♂️")
+    #  print(f"Your guess of {x}is  low")
+ else:
+               
+        print(f"Great you have guessed it correctly in {chances} attempt😎😋👍")
+        print(f"your Score is::::{100-chances}")
+        break
+        
+
